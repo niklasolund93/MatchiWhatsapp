@@ -44,6 +44,6 @@ För att köra så behöver du installera de bibliotek som behövs manuellt elle
 ## Installation
 
 ```bash
-git clone https://github.com/your-repo/matchi-bot.git
-cd matchi-bot
+git clone https://github.com/niklasolund93/MatchiWhatsapp.git
+cd MatchiWhatsapp
 pip install -r requirements.txt
