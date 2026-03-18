@@ -50,9 +50,7 @@ För att köra så behöver du installera de bibliotek som behövs manuellt elle
 git clone https://github.com/niklasolund93/MatchiWhatsapp.git
 cd MatchiWhatsapp
 pip install -r requirements.txt
-
-
-
+```
 ---
 
 ## Exempelbild på hur det kan se ut
