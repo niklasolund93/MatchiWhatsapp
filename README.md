@@ -17,6 +17,8 @@ Automatiskt script som:
 - behåller chrome session (slipp QR-login varje gång, och kan ha det på i bakgrunden)
 - schemaläggning efter önskemål
 
+---
+
 ## Information kring setup
 För att köra så behöver du installera de bibliotek som behövs manuellt eller via requirements.txt:
 1. requests & requirements för matchi scraping
@@ -27,6 +29,7 @@ För att köra så behöver du installera de bibliotek som behövs manuellt elle
 6. när du är nöjd med vad den hittar och meddelandet så kan du ändra till "TEST_MODE = False"
 7. nu kan den vara igång i bakgrunden av din dator så körs den automatiskt. OBS! har problem med headerless (chrome är osynlig och körs som dold process) och behålla sessionen så för nu så måste den poppa upp för datorn/servern som kör scriptet. 
 
+---
 
 ## Saker att justera i scriptet!!
 
@@ -47,3 +50,11 @@ För att köra så behöver du installera de bibliotek som behövs manuellt elle
 git clone https://github.com/niklasolund93/MatchiWhatsapp.git
 cd MatchiWhatsapp
 pip install -r requirements.txt
+
+
+
+---
+
+## Exempelbild på hur det kan se ut
+
+[![Matchi WhatsApp Example](MatchWhatsappExample.png)](MatchWhatsappExample.png)
