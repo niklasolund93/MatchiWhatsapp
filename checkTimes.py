@@ -25,14 +25,14 @@ FACILITIES = [
 ]
 
 #detta är exakta namnet på den whatsappp grupp du vill skicka meddelande till
-GROUP_NAME = "test autoutskick"
+GROUP_NAME = "Tennis-Gruppen Enskede/mik-hallen"
 
 #detta är filen som den sparar ned tidigare utskick till, detta för att den inte skall spamma samma tid flera dagar i chatten
 SAVED_FILE = "sent_slots.json"
 
 #ändra till True för att inte spara historik och inte skicka meddelande i chatten
 #ändra till False för att köra på riktigt
-TEST_MODE = True
+TEST_MODE = False
 
 HEADERS = {
     "accept": "*/*",
@@ -141,14 +141,19 @@ def send_whatsapp(message):
     driver.get("https://web.whatsapp.com")
 
     wait = WebDriverWait(driver, 30)
+    print("Väntar på att WhatsApp ska ladda...")
 
-    print("Logga in i WhatsApp Web...")
-    time.sleep(20)
-
-    search = wait.until(EC.presence_of_element_located(
-        (By.XPATH, "//div[@contenteditable='true'][@data-tab='3']")
+    wait.until(EC.presence_of_element_located(
+        (By.XPATH, "//div[@id='side']")
     ))
 
+    print("WhatsApp laddat")
+
+    search = wait.until(EC.element_to_be_clickable(
+        (By.XPATH, "//input[@role='textbox']")
+    ))
+    print("Sökfält hittat")
+    
     search.click()
     search.clear()
     search.send_keys(GROUP_NAME)
